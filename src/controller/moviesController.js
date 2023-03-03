@@ -4,6 +4,7 @@ const moviesData = async function (req, res) {
     let data = req.body
 
     let movies = await moviesModel.create(data)
+    
     res.send(movies)
 }
 const movieDataGet = async function (req, res) {

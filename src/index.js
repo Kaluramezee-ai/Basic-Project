@@ -6,9 +6,9 @@ const router = require("./router/router")
 const port = process.env.PORT || 3000
 const MongoDbUrl=process.env.DataBaseUrl
 const app = express()
-console.log(MongoDbUrl)
+
 app.use(bodyParse.json())
-console.log(MongoDbUrl)
+
 mongoose.connect(MongoDbUrl, {
 
 })

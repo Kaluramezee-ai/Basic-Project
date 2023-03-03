@@ -22,7 +22,16 @@ Router.get("/candidate/:Canadiatesname",function(req,res){
     console.log("path Params candidate name is ",name.Canadiatesname)
     res.send("Done")
 })
-
+Router.post("/test-post",function(req,res){
+    let data=req.body
+    console.log(data)
+    res.send([1,2,3,4,5,6,7,7,8])
+})
+Router.post("/addArray",function(req,res){
+    let arr=[1,3,4,5,"kaluram",false,null,34,"ram"]
+   let arr1= arr.push(req.body.arr5)
+   console.log(arr.flat(Infinity))
+})
 Router.post("/movies",movieController.moviesData)
 Router.get("/movies/:indexNumber",movieController.movieDataGet)
 Router.post("/user",userController.userData)
